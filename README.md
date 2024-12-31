@@ -1,3 +1,6 @@
-# Advent of Code 20235
+# Advent of Code 2024
 
-Something intersting goes here...
+Something interesting goes here...
+
+
+The tests folder is for global tests only

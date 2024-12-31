@@ -1,3 +1,4 @@
+from collections import Counter
 from common.parser import parse_input
 from common.script_path import get_caller_file_path as get_local_path
 
@@ -8,9 +9,11 @@ def solve(list_one: list[int], list_two: list[int]) -> int:
         raise AssertionError("Lists must not be None.")
 
     if len(list_one) != len(list_two):
-        raise AssertionError("Lists must have the same length.")
+        raise AssertionError("Lists must have the same length.")i
 
-    return sum(abs(a - b) for a, b in zip(sorted(list_one), sorted(list_two)))
+    list_two_count = Counter(list_two)
+
+    return sum(i * list_two_count.get(i, 0) for i in list_one)
 
 
 def run():
@@ -20,4 +23,4 @@ def run():
 
 
 if __name__ == "__main__":
-    print("Day 1, Part 1:", run())
+    print("Day 1, Part 2:", run())
