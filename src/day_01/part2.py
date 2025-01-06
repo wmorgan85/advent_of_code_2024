@@ -9,7 +9,7 @@ def solve(list_one: list[int], list_two: list[int]) -> int:
         raise AssertionError("Lists must not be None.")
 
     if len(list_one) != len(list_two):
-        raise AssertionError("Lists must have the same length.")i
+        raise AssertionError("Lists must have the same length.")
 
     list_two_count = Counter(list_two)
 
